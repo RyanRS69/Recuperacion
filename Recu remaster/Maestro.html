@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        margin: 20px;
+        padding: 10px;
+        }
+       
+
+        #tabla-maestros {
+        margin: 0 auto;
+        }
+
+        th, td {
+        border: 1px solid black;
+        padding: 10px;
+        }
+
+        th {
+        background-color: lightgray;
+        color: black;
+        }
+
+        td {
+        background-color: white;
+        color: black;
+        }
+
+
+        form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		button {
+			margin-top: 1rem;
+		}
+
+
+        #guardar-maes {
+        background-color: #4CAF50; /* color de fondo */
+        border: none; /* sin borde */
+        color: rgb(0, 0, 0); /* color del texto */
+        padding: 10px 20px; /* espacio interno */
+        border-radius: 10px;
+        text-align: center; /* alinear el texto al centro */
+        text-decoration: none; /* sin subrayado */
+        display: inline-block; /* mostrar como bloque */
+        font-size: 16px; /* tamaño de la fuente */
+        margin: 10px; /* margen exterior */
+        cursor: pointer; /* mostrar cursor al pasar por encima */
+        }
+
+        #pastel{
+        background-color: #eee5bc;
+        color: #000000;
+        padding: 20px;
+        text-align: center;
+        font-size: 36px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        
+        input[type="text"] {
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        }
+
+        ::placeholder {
+        color: #000000;
+        opacity: 0.5;
+        }
+
+
+        input[type="text"] {
+        color: #000;
+        background-color: #e2e7ff;
+        border: 0.5px solid #07c1ff;
+        box-shadow: 0px 0px 10px 2px #3b5d68;
+        }
+
+
+        #BotonInicio {
+        list-style: none;
+        }
+        #BotonInicio {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            }
+
+            #BotonInicio li {
+            display: inline-block;
+            margin-right: 10px;
+            }
+
+            #BotonInicio li:last-child {
+            margin-right: 0;
+            }
+
+            #BotonInicio a {
+            display: block;
+            padding: 30px 50px;
+            font-size: 15px;
+            background-color: #c6f2ff;
+            color: #000000;
+            text-decoration: none;
+            }
+            
+            
+    </style>
+</head>
+
+<body>
+    <body style="background-image: url('Entrena.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <div id="pastel">Guardador de entrenadores pokemon</div>
+    <ul id="BotonInicio">
+        <li><a href="NuevoMenu.html">Volver a inicio</a></li>
+    </ul>
+    <form>
+      <br>
+      <input type="text" name="nombrePok" id="nEnt" placeholder="Nombre del entrenador" size = "25">
+      <br>
+      <input type="text" name="tipoPok" id="eEnt" placeholder="Edad del entrenador" size="25">
+      <br>
+      <input type="text" name="tipoPok" id="pokFav" placeholder="Pokemon fav del entrenador" size="25">
+      <br>
+      <input type="text" name="tipoPok" id="tFav" placeholder="Calidad fav del entrenador" size="25">
+      <br>
+      <button type="button" id="guardar-maes" onclick="saveEntrenador()">Guardar</button>
+  </form>
+
+  <table id="tabla-maestros">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Pokemon fav</th>
+          <th>Calidad de pokemon fav</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    
+</body>
+<script src="Entrenador.js"></script>
+<script src="Main.js"></script>
+<script src="helper.js"></script>
+</html>

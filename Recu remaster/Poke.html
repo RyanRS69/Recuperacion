@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de pokemones</title>
+    <style>
+
+        #tabla-pokemones {
+        margin: 0 auto;
+        }
+
+        table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        margin: 20px;
+        padding: 10px;
+        }
+
+        th, td {
+        border: 1px solid black;
+        padding: 10px;
+        }
+
+        th {
+        background-color: lightgray;
+        color: black;
+        }
+
+        td {
+        background-color: white;
+        color: black;
+        }
+
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		button {
+			margin-top: 1rem;
+		}
+
+        #Cabezas{
+            background: #fff9a9;
+        }
+
+        #guardar-poke {
+        background-color: #4CAF50; /* color de fondo */
+        border: none; /* sin borde */
+        color: rgb(0, 0, 0); /* color del texto */
+        padding: 10px 20px; /* espacio interno */
+        border-radius: 10px;
+        text-align: center; /* alinear el texto al centro */
+        text-decoration: none; /* sin subrayado */
+        display: inline-block; /* mostrar como bloque */
+        font-size: 16px; /* tamaño de la fuente */
+        margin: 10px; /* margen exterior */
+        cursor: pointer; /* mostrar cursor al pasar por encima */
+        }
+
+        
+        input[type="text"] {
+        color: #000;
+        background-color: #e2e7ff;
+        border: 0.5px solid #4c5558;
+        box-shadow: 0px 0px 10px 2px #3b5d68;
+        }
+
+                #pastel{
+        background-color: #eee5bc;
+        color: #000000;
+        padding: 20px;
+        text-align: center;
+        font-size: 36px;
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        input[type="text"] {
+        border: 2px solid #fff;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
+        }
+
+        ::placeholder {
+        color: #000000;
+        opacity: 0.5;
+        }
+
+        #BotonInicio {
+        list-style: none;
+        }
+        #BotonInicio {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            }
+
+            #BotonInicio li {
+            display: inline-block;
+            margin-right: 10px;
+            }
+
+            #BotonInicio li:last-child {
+            margin-right: 0;
+            }
+
+            #BotonInicio a {
+            display: block;
+            padding: 30px 50px;
+            font-size: 15px;
+            background-color: #c6f2ff;
+            color: #000000;
+            text-decoration: none;
+            }
+
+
+    </style>
+</head>
+<body>
+    <body style="background-image: url('Fondo2.jpg'); background-size: cover; background-repeat: no-repeat;">
+
+    <div id="pastel">Creador de pokemones</div>
+    <ul id="BotonInicio">
+        <li><a href="NuevoMenu.html">Volver a inicio</a></li>
+    </ul>
+    <form>
+        <br>
+        <input type="text" name="nombrePok" id="nPok" placeholder="Ingrese el nombre del pokemon" size = "25">
+        <br>
+        <input type="text" name="tipoPok" id="tPok" placeholder="Ingrese el tipo del pokemon" size="25">
+        <br>
+        <input type="text" name="combPok" id="tComb" placeholder="Ingrese el tipo de combate" size="25">
+        <br>
+        <button type="button" id="guardar-poke" onclick="savePokemon()">Guardar</button>
+       
+    </form>
+
+    <table id="tabla-pokemones">
+        <thead >
+          <tr>
+            <th id="Cabezas">Nombre</th>
+            <th id="Cabezas">Tipo</th>
+            <th id="Cabezas">Tipo de combate</th>
+            <tbody id="tabla-pokemones"></tbody>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      <script src="Pokemon.js"></script>
+      <script src="Main.js"></script>
+      <script src="helper.js"></script>
+</body>
+</html>
